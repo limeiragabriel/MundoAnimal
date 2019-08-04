@@ -44,9 +44,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -622,7 +628,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: bed6b1f6d8b44e4131865c45ac9fa4cb
+      Hash: 26975e1ef14e6a05a469cab54ae0fa3c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -700,7 +706,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: e813c40504fa91d2a2c6050123a45c27
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuManager

@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     public int animalsPerGame = 4;
     public bool CanMove { get; private set; }
+    public int winPoints = 100;
 
     public List<Animal> allAnimals;
     private List<Animal> gameAnimals;
@@ -37,6 +38,8 @@ public class GameManager : MonoBehaviour
 
     [Header("SFX")]
     public AudioClip snap;
+
+    public AudioClip tutorial;
 
     private void Awake()
     {
@@ -63,6 +66,8 @@ public class GameManager : MonoBehaviour
         top.animals = Util.ShuffleList(gameAnimals, 7);
         center.animals = Util.ShuffleList(gameAnimals, 117);
         bottom.animals = Util.ShuffleList(gameAnimals, 15);
+
+        AudioManager.instance.PlaySound(tutorial, Vector3.zero);
 
     }
 
@@ -111,6 +116,10 @@ public class GameManager : MonoBehaviour
 
         pages.SetActive(false);
         winnerBanner.SetActive(true);
+
+        int pontos = PlayerPrefs.GetInt("points", 0);
+        pontos += winPoints;
+        PlayerPrefs.SetInt("points", pontos);
 
         AudioManager.instance.SetVolume(.1f, AudioManager.AudioChannel.Music);
         AudioManager.instance.SetVolume(.7f, AudioManager.AudioChannel.Sfx);
